@@ -1,0 +1,25 @@
+.home {
+    font-size: 2vmax;
+}
+
+.inputcontainer {
+    width: 100%;
+}
+
+.inputarea {
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    padding: 10px;
+}
+
+textarea {
+    box-sizing: border-box;
+    resize: none;
+    width: 100%;
+}
+
+input {
+    margin-top: 0;  
+    margin-bottom: 40px;
+}
