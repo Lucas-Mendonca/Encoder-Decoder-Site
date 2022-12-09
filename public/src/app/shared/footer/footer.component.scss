@@ -1,0 +1,43 @@
+footer {
+    position: fixed;
+    background: #fff;
+    bottom: 0;
+    left: 0;
+
+    height: 60px;
+    width: 100%;
+
+    display: flex;
+
+    div {
+        flex: 1;
+        padding: 10px;
+        padding-top: 7px;
+        padding-bottom: 3px;
+        border-top: 2px solid #000;
+
+        div {
+            padding: 0;
+            padding-top: 5px;
+            margin: 0;
+            border: 0;
+        }
+    }
+
+    .longdiv {
+        flex: 3
+    }
+}
+
+.footerslot {
+    height: 75px;
+}
+
+.endalign {
+    text-align: end;
+}
+
+.footerico img {
+    height: 20px;
+    width: 20px;
+}
