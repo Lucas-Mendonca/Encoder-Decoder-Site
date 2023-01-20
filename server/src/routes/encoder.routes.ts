@@ -4,6 +4,6 @@ import { Router } from 'express'
 const encode = new controller.EncoderController()
 const encoderRoute = Router()
 
-encoderRoute.get('/')
+encoderRoute.get('/binary', encode.binary)
 
 export { encoderRoute }
