@@ -1,3 +1,4 @@
-import { binaryEncode } from "./binaryEncoder"
+import { asciiEncoder } from "./asciiEncoder"
+import { binaryEncoder } from "./binaryEncoder"
 
-export { binaryEncode }
+export { binaryEncoder, asciiEncoder }

@@ -1,4 +1,4 @@
-export function binaryEncode(text: String, spaced: Boolean): string {
+export function binaryEncoder (text: String, spaced: Boolean): string {
     let binaryText: string[] = []
     text.trim()
 
