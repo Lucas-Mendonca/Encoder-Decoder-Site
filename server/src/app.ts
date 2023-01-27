@@ -1,10 +1,11 @@
-import Express, { Request, Response, NextFunction } from 'express'
+import Express, { Request, Response, NextFunction, json } from 'express'
 import * as route from './routes/_index'
 import { appError } from './error';
 
 const port = 3333;
 const app = Express();
 
+app.use(Express.json())
 
 app.use('/decoder', route.decoderRoute);
 app.use('/encoder', route.encoderRoute);
@@ -21,4 +22,5 @@ app.use((err: Error, request: Request, response: Response, next: NextFunction) =
         message: `Internal server error :: ${err.message}`
     })
 })
+
 app.listen(port)

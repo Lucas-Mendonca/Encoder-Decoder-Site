@@ -1,4 +1,4 @@
-export function binaryDecoder(text: string, spaced?: Boolean): string {
+export function binaryDecoder(text: string, spaced: Boolean): string {
     if (!spaced) {
         const splitedText: string[] = text.split('');
         let endText: string = "";

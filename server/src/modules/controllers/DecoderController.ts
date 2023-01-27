@@ -5,7 +5,9 @@ export default class DecoderController {
     
     binary(request: Request, response: Response) {
         const { text, spaced } = request.body
-        service.binaryDecoder(text, spaced)
+        const decodedText = service.binaryDecoder(text, spaced)
+
+        return response.status(200).json(decodedText)
     } 
 
 }

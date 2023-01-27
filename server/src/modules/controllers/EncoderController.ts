@@ -5,7 +5,9 @@ export default class EncoderController {
 
     binary(request: Request, response: Response) {
         const {text, spaced} = request.body
-        service.binaryEncode(text, spaced)
+        const encodedText = service.binaryEncode(text, spaced)
+
+        return response.status(200).json(encodedText)
     }
 
 }

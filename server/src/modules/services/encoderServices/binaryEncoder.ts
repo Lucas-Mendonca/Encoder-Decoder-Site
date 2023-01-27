@@ -1,19 +1,17 @@
-export function binaryEncode(text: String, spaced?: Boolean): string {
+export function binaryEncode(text: String, spaced: Boolean): string {
     let binaryText: string[] = []
     text.trim()
 
     for(let i = 0; i < text.length; i++) {
         let charInASCII:number = text.charCodeAt(i)
-        let charInBinary:string = "";
+        let charInBinary8digits:string = "";
 
-        while(charInASCII > 0) {
-            if(charInASCII % 2 == 1) {
-                charInBinary += "1"
-            } else {
-                charInBinary += "0"
-            }
-            charInASCII = Math.floor(charInASCII/2)
-        }
+        let charInBinary:string = (charInASCII).toString(2)
+        while (charInBinary.length < 8) {
+            let corrector = "0"
+            corrector += charInBinary
+            charInBinary = corrector
+        };
 
         binaryText.push(charInBinary)
     }
